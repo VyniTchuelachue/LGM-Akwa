@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+*.log
+server/data/reservations.json
+*.tsbuildinfo
+
+# Original source assets (kept locally; renamed working copies live in client/public/images)
+/Assets/
