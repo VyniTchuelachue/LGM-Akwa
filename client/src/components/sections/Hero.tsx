@@ -37,14 +37,7 @@ const Hero = () => {
           </h1>
 
           <p className="mt-6 max-w-xl font-serif text-xl italic text-cream/90 sm:text-2xl">
-            Une maison douala&iuml;se fondée en {restaurant.since}, où glaces
-            artisanales et cuisine généreuse se retrouvent sous un même toit.
-          </p>
-
-          <p className="mt-4 max-w-lg text-sm leading-relaxed text-cream/70 sm:text-base">
-            Glaces fabriquées sur place chaque matin, pizzas au four, grillades
-            et spécialités orientales, servies chaque jour à Akwa et dans nos
-            quatre autres adresses de Douala.
+            Depuis {restaurant.since}, le rendez-vous gourmand des Doualais.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
