@@ -7,7 +7,7 @@ import CategoryNav from "@/components/menu/CategoryNav";
 import CategorySection from "@/components/menu/CategorySection";
 import MenuItemRow from "@/components/menu/MenuItemRow";
 import CartBar from "@/components/menu/CartBar";
-import MenuReservation from "@/components/menu/MenuReservation";
+import ReservationTabs from "@/components/menu/ReservationTabs";
 import { menu, allMenuItems } from "@/data/menu";
 
 function normalize(s: string) {
@@ -136,7 +136,7 @@ function MenuPage() {
           )}
         </div>
 
-        <MenuReservation lines={lines} total={total} />
+        <ReservationTabs lines={lines} total={total} onAdd={addItem} onRemove={removeItem} />
       </main>
       <Footer />
 

@@ -52,9 +52,8 @@ const MenuReservation = ({ lines, total }: { lines: CartLine[]; total: number })
   }
 
   return (
-    <section id="reservation" className="scroll-mt-40 bg-red-gradient py-24 sm:py-28">
-      <div className="container">
-        <div className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+    <div className="container">
+      <div className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -248,8 +247,7 @@ const MenuReservation = ({ lines, total }: { lines: CartLine[]; total: number })
             )}
           </motion.form>
         </div>
-      </div>
-    </section>
+    </div>
   );
 };
 
