@@ -3,6 +3,7 @@ import HomePage from "@/pages/HomePage";
 import MenuPage from "@/pages/MenuPage";
 import ScrollToTop from "@/components/ScrollToTop";
 import PageTransition from "@/components/PageTransition";
+import FloatingCallButton from "@/components/FloatingCallButton";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/menu" element={<MenuPage />} />
       </Routes>
+      <FloatingCallButton />
     </BrowserRouter>
   );
 }

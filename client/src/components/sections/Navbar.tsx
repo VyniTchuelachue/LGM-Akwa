@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { restaurant } from "@/data/restaurant";
 
 const links = [
@@ -54,14 +54,7 @@ const Navbar = () => {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-4 lg:flex">
-          <a
-            href={restaurant.phoneHref}
-            className="flex items-center gap-2 text-sm font-semibold text-red"
-          >
-            <Phone size={16} className="text-red" />
-            {restaurant.phone}
-          </a>
+        <div className="hidden items-center lg:flex">
           <Link to="/menu#reservation" className="btn-primary !px-6 !py-2.5 text-xs">
             Réserver
           </Link>
