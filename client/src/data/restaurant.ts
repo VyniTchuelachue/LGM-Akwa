@@ -21,60 +21,45 @@ export const restaurant = {
 
 export const dishes = [
   {
-    name: "La Coupe LGM",
-    description: "6 boules au choix, salade de fruits, chantilly, sauce fraise, noisettes — pour 2 personnes.",
-    image: "/images/trois-boules-glace.jpg",
-    price: "7 000 XAF",
+    name: "Bol de Glace",
+    description: "La meilleure crème glacée de Douala.",
+    image: "/images/bol-de-glace.jpg",
+    price: "À partir de 1 500 XAF",
   },
   {
-    name: "L'Africaine",
-    description: "4 boules : noix de coco, chocolat, café, vanille, chantilly, sauce chocolat, noisettes.",
-    image: "/images/l-africaine.jpg",
-    price: "5 000 XAF",
+    name: "Nos Pizzas",
+    description: "Pâte fine et garnitures généreuses, cuites au four — en petit ou grand modèle.",
+    image: "/images/pizza-signature.png",
+    price: "À partir de 5 000 XAF",
   },
   {
-    name: "Pizza Fermière",
-    description: "Sauce tomate, oignon, poulet, champignons, maïs, fromage, basilic.",
-    image: "/images/pizza-fermiere.jpg",
-    price: "6 500 XAF",
-  },
-  {
-    name: "Pizza du Pêcheur",
-    description: "Sauce tomate, thon, crevettes, oignons, fromage — en petit ou grand modèle.",
-    image: "/images/pizza-du-pecheur.jpg",
-    price: "6 500 XAF",
-  },
-  {
-    name: "LGM Burger",
-    description: "Viande, fromage, frites, œuf et salade — notre burger signature.",
-    image: "/images/table-hamburgers.jpg",
-    price: "3 000 XAF",
-  },
-  {
-    name: "Strawberry Moka",
-    description: "Notre boisson glacée fraise-café, préparée minute au salon de thé.",
-    image: "/images/strawberry-moka.jpg",
+    name: "Shawarma au Poulet",
+    description: "Poulet mariné grillé, crudités fraîches et sauce maison, roulés dans une galette croustillante.",
+    image: "/images/shawarma-poulet-highlight.jpg",
     price: "2 500 XAF",
+  },
+  {
+    name: "Moka Cake",
+    description: "Notre pâtisserie signature, gâteau moka onctueux, à savourer sur place ou à emporter.",
+    image: "/images/moka-cake.png",
+    price: "1 500 XAF",
+  },
+  {
+    name: "Hamburger",
+    description: "Viande, fromage fondant et crudités fraîches, servi avec une portion de frites.",
+    image: "/images/hamburger-signature.jpg",
+    price: "2 000 XAF",
+  },
+  {
+    name: "Cappuccino",
+    description: "Onctueux, servi avec chantilly et cacao — parfait pour une pause gourmande au salon de thé.",
+    image: "/images/cappuccino.jpg",
+    price: "1 700 XAF",
   },
 ];
 
 export const gallery = [
   { src: "/images/interieur-1.jpg", alt: "Étage et ambiance du salon Le Glacier Moderne" },
-  { src: "/images/ndole-viande.jpg", alt: "Plat de la maison, servi avec frites" },
   { src: "/images/interieur-2.jpg", alt: "Salle du restaurant Le Glacier Moderne" },
   { src: "/images/interieur-3.jpg", alt: "Terrasse du Glacier Moderne à Akwa" },
-  { src: "/images/creme-glacee-vanille-chocolat.jpg", alt: "Crème glacée vanille chocolat" },
-  { src: "/images/salade-avocat-crevettes.jpg", alt: "Salade d'avocat aux crevettes" },
-  { src: "/images/shawarma-poulet.jpg", alt: "Shawarma poulet" },
-  { src: "/images/gaufre-creme.jpg", alt: "Gaufre à la crème" },
-  { src: "/images/pizza-orientale.jpg", alt: "Pizza orientale" },
-  { src: "/images/cocktail-fruits.jpg", alt: "Cocktail de fruits frais" },
-  { src: "/images/frites.jpg", alt: "Pommes frites" },
-  { src: "/images/salade-fruits.jpg", alt: "Salade de fruits" },
-];
-
-export const glacierHighlights = [
-  { src: "/images/glace-chocolat.jpg", name: "Glace au chocolat" },
-  { src: "/images/creme-chocolat.jpg", name: "Pâtisserie du jour" },
-  { src: "/images/cappuccino.jpg", name: "Cappuccino" },
 ];

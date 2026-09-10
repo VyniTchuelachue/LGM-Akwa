@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X } from "lucide-react";
-import { gallery, glacierHighlights } from "@/data/restaurant";
+import { gallery } from "@/data/restaurant";
 
 const Gallery = () => {
   const [active, setActive] = useState<string | null>(null);
@@ -47,25 +47,6 @@ const Gallery = () => {
           ))}
         </div>
 
-        <div className="mt-20">
-          <h3 className="text-center font-serif text-xl italic text-white">
-            Le salon &amp; ses douceurs maison
-          </h3>
-          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
-            {glacierHighlights.map((c) => (
-              <div key={c.name} className="group relative overflow-hidden rounded-2xl">
-                <img
-                  src={c.src}
-                  alt={c.name}
-                  className="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink to-transparent p-5">
-                  <span className="font-serif text-lg text-cream">{c.name}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
 
       <AnimatePresence>
