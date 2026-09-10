@@ -40,7 +40,7 @@ const PageTransition = () => {
               initial={{ opacity: 0, scale: 0.7 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="h-20 w-20 rounded-full border-2 border-white/80 object-cover shadow-lg sm:h-24 sm:w-24"
+              className="h-28 w-auto object-contain drop-shadow-lg sm:h-32"
             />
 
             <motion.span
