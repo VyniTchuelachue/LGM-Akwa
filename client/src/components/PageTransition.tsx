@@ -6,11 +6,18 @@ const prefersReducedMotion =
   typeof window !== "undefined" &&
   window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
 
-const HOLD_MS = prefersReducedMotion ? 250 : 1900;
-const FILL_DELAY = 0.25;
+// Phase 1: logo entrance + a couple of breathing pulses, held on screen alone.
+const LOGO_PULSE_DURATION = prefersReducedMotion ? 0 : 1.9;
+const LOGO_PULSE_TIMES = [0, 0.26, 0.47, 0.63, 0.84, 1];
+
+// Phase 2: text reveal (same animation as before), starting once the logo settles.
+const TEXT_START = prefersReducedMotion ? 0 : LOGO_PULSE_DURATION;
+const FILL_DELAY = TEXT_START + 0.25;
 const FILL_DURATION = prefersReducedMotion ? 0 : 0.7;
 const SHIMMER_DELAY = FILL_DELAY + FILL_DURATION - 0.05;
 const SHIMMER_DURATION = prefersReducedMotion ? 0 : 0.7;
+
+const HOLD_MS = prefersReducedMotion ? 250 : (SHIMMER_DELAY + SHIMMER_DURATION + 0.3) * 1000;
 
 const PageTransition = () => {
   const { pathname } = useLocation();
@@ -38,15 +45,22 @@ const PageTransition = () => {
               src="/images/logo.png"
               alt="Logo Le Glacier Moderne"
               initial={{ opacity: 0, scale: 0.7 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              animate={{ opacity: 1, scale: prefersReducedMotion ? 1 : [0.7, 1, 1.05, 1, 1.05, 1] }}
+              transition={{
+                opacity: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
+                scale: {
+                  duration: prefersReducedMotion ? 0.2 : LOGO_PULSE_DURATION,
+                  times: prefersReducedMotion ? undefined : LOGO_PULSE_TIMES,
+                  ease: "easeInOut",
+                },
+              }}
               className="h-28 w-auto object-contain drop-shadow-lg sm:h-32"
             />
 
             <motion.span
               initial={{ opacity: 0, y: -6 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.25 }}
+              transition={{ duration: 0.4, delay: TEXT_START }}
               className="mt-4 text-[0.6rem] font-semibold uppercase tracking-[0.45em] text-white/70"
             >
               Depuis 1996 — Akwa, Douala
@@ -86,7 +100,7 @@ const PageTransition = () => {
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.35 }}
+              transition={{ duration: 0.4, delay: TEXT_START + 0.1 }}
               className="mt-3 text-[0.6rem] font-semibold uppercase tracking-[0.45em] text-white/70"
             >
               Salon de thé · Glacier · Pâtisserie · Restaurant
