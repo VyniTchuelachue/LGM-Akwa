@@ -13,7 +13,7 @@ const Hero = () => {
         <img
           src="/images/facade-akwa.jpg"
           alt="Façade du Glacier Moderne à Akwa, Douala"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-[58%_center] sm:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-red-dark/60" />
         <div className="absolute inset-0 bg-ink/30" />
