@@ -21,6 +21,10 @@ export default {
           DEFAULT: "#FBF7EF",
           dark: "#F0E6D2",
         },
+        pink: {
+          DEFAULT: "#F9BDCC",
+          dark: "#F2A0B5",
+        },
         ink: "#201512",
       },
       fontFamily: {

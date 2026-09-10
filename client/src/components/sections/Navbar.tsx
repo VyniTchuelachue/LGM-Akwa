@@ -26,10 +26,8 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-red-dark/95 py-2.5 shadow-lg shadow-black/20 backdrop-blur-md"
-          : "bg-transparent py-5"
+      className={`fixed inset-x-0 top-0 z-50 bg-pink transition-all duration-300 ${
+        scrolled ? "py-2.5 shadow-lg shadow-black/10 backdrop-blur-md" : "py-5"
       }`}
     >
       <div className="container flex items-center justify-between">
@@ -39,10 +37,7 @@ const Navbar = () => {
             alt="Logo Le Glacier Moderne"
             className="h-12 w-auto shrink-0 object-contain sm:h-14"
           />
-          <span
-            className="font-script text-3xl leading-none transition-colors duration-300 sm:text-4xl"
-            style={{ color: scrolled ? "#FFFFFF" : "#C8102E" }}
-          >
+          <span className="font-script text-3xl leading-none text-red sm:text-4xl">
             {restaurant.name}
           </span>
         </Link>
@@ -52,9 +47,7 @@ const Navbar = () => {
             <Link
               key={link.href}
               to={link.href}
-              className={`text-xs font-semibold uppercase tracking-[0.15em] transition-colors ${
-                scrolled ? "text-cream/90 hover:text-white" : "text-red hover:text-red-dark"
-              }`}
+              className="text-xs font-semibold uppercase tracking-[0.15em] text-red transition-colors hover:text-red-dark"
             >
               {link.label}
             </Link>
@@ -64,11 +57,9 @@ const Navbar = () => {
         <div className="hidden items-center gap-4 lg:flex">
           <a
             href={restaurant.phoneHref}
-            className={`flex items-center gap-2 text-sm font-semibold ${
-              scrolled ? "text-cream" : "text-red"
-            }`}
+            className="flex items-center gap-2 text-sm font-semibold text-red"
           >
-            <Phone size={16} className={scrolled ? "text-white" : "text-red"} />
+            <Phone size={16} className="text-red" />
             {restaurant.phone}
           </a>
           <Link to="/menu#reservation" className="btn-primary !px-6 !py-2.5 text-xs">
@@ -77,7 +68,7 @@ const Navbar = () => {
         </div>
 
         <button
-          className={`lg:hidden ${scrolled ? "text-cream" : "text-red"}`}
+          className="text-red lg:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Menu"
         >
@@ -86,14 +77,14 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="mt-4 border-t border-white/20 bg-red-dark/98 px-6 py-6 backdrop-blur-md lg:hidden">
+        <div className="mt-4 border-t border-red/15 bg-pink px-6 py-6 lg:hidden">
           <nav className="flex flex-col gap-4">
             {links.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
                 onClick={() => setOpen(false)}
-                className="text-sm font-semibold uppercase tracking-[0.15em] text-cream/90 hover:text-white"
+                className="text-sm font-semibold uppercase tracking-[0.15em] text-red hover:text-red-dark"
               >
                 {link.label}
               </Link>
