@@ -7,7 +7,6 @@ const links = [
   { href: "/#accueil", label: "Accueil" },
   { href: "/#a-propos", label: "À propos" },
   { href: "/#avis", label: "Avis" },
-  { href: "/menu", label: "Menu" },
   { href: "/#galerie", label: "Galerie" },
   { href: "/menu#reservation", label: "Réservation" },
   { href: "/#contact", label: "Contact" },
@@ -27,17 +26,17 @@ const Navbar = () => {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 bg-pink transition-all duration-300 ${
-        scrolled ? "py-2.5 shadow-lg shadow-black/10 backdrop-blur-md" : "py-5"
+        scrolled ? "py-2 shadow-lg shadow-black/10 backdrop-blur-md" : "py-3.5"
       }`}
     >
       <div className="container flex items-center justify-between">
-        <Link to="/#accueil" className="flex items-center gap-2.5">
+        <Link to="/#accueil" className="-ml-1 flex items-center gap-1.5 sm:ml-0 sm:gap-2.5">
           <img
             src="/images/logo.png"
             alt="Logo Le Glacier Moderne"
-            className="h-12 w-auto shrink-0 object-contain sm:h-14"
+            className="h-9 w-auto shrink-0 object-contain sm:h-14"
           />
-          <span className="font-script text-3xl leading-none text-red sm:text-4xl">
+          <span className="font-script text-2xl leading-none text-red sm:text-4xl">
             {restaurant.name}
           </span>
         </Link>
