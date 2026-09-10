@@ -33,12 +33,20 @@ const Navbar = () => {
       }`}
     >
       <div className="container flex items-center justify-between">
-        <Link
-          to="/#accueil"
-          className="font-script text-3xl leading-none transition-colors duration-300 sm:text-4xl"
-          style={{ color: scrolled ? "#FFFFFF" : "#C8102E" }}
-        >
-          {restaurant.name}
+        <Link to="/#accueil" className="flex items-center gap-2.5">
+          <img
+            src="/images/logo.png"
+            alt="Logo Le Glacier Moderne"
+            className={`h-10 w-10 shrink-0 rounded-full border-2 object-cover shadow-sm transition-colors duration-300 sm:h-11 sm:w-11 ${
+              scrolled ? "border-white/80" : "border-white"
+            }`}
+          />
+          <span
+            className="font-script text-3xl leading-none transition-colors duration-300 sm:text-4xl"
+            style={{ color: scrolled ? "#FFFFFF" : "#C8102E" }}
+          >
+            {restaurant.name}
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">

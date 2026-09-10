@@ -34,11 +34,20 @@ const PageTransition = () => {
           aria-hidden="true"
         >
           <div className="relative flex flex-col items-center px-6 text-center">
+            <motion.img
+              src="/images/logo.png"
+              alt="Logo Le Glacier Moderne"
+              initial={{ opacity: 0, scale: 0.7 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="h-20 w-20 rounded-full border-2 border-white/80 object-cover shadow-lg sm:h-24 sm:w-24"
+            />
+
             <motion.span
               initial={{ opacity: 0, y: -6 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.05 }}
-              className="text-[0.6rem] font-semibold uppercase tracking-[0.45em] text-white/70"
+              transition={{ duration: 0.4, delay: 0.25 }}
+              className="mt-4 text-[0.6rem] font-semibold uppercase tracking-[0.45em] text-white/70"
             >
               Depuis 1996 — Akwa, Douala
             </motion.span>
